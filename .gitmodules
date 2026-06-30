@@ -1,0 +1,4 @@
+[submodule "src/hsp2_reader/toolbox_utils"]
+	path = src/hsp2_reader/toolbox_utils
+	url = git@github.com:timcera/toolbox_utils.git
+	branch = main
