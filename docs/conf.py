@@ -10,6 +10,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+# Standard library imports
 import os
 
 # If extensions (or modules to document with autodoc) are in another directory,

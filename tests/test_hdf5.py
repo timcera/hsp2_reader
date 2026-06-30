@@ -14,8 +14,6 @@ import numpy as np
 import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal
-
-# First party imports
 from toolbox_utils import tsutils
 from toolbox_utils.readers import hdf5
 

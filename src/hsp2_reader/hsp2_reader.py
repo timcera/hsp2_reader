@@ -1,11 +1,14 @@
 """Collection of functions for reading different time series from HSP2 results in a HDF5 file."""
 
+# Standard library imports
 import os.path as _os_path
 import sys as _sys
 import warnings as _warnings
 
+# Third party imports
 import pandas as pd
 
+# First party imports
 from hsp2_reader.toolbox_utils.src.toolbox_utils import tsutils
 from hsp2_reader.toolbox_utils.src.toolbox_utils.readers.hdf5 import hdf5 as _hdf5
 
@@ -142,8 +145,10 @@ def hdf5(hdf5path, interval, *labels, **kwds):
 
 def main():
     """Set debug, register *_cli functions, and run cltoolbox.main function."""
+    # Standard library imports
     from argparse import RawTextHelpFormatter
 
+    # Third party imports
     import cltoolbox
 
     if not _os_path.exists("debug_hsp2_reader"):
@@ -192,7 +197,6 @@ The format for floating point numbers in the output table."""
             tablefmt=tablefmt,
             float_format=float_format,
         )
-
 
     cltoolbox.main()
 
