@@ -29,7 +29,16 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"
 ] # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
 dependencies = [
-    "hsp2_reader"
+    "dateparser",
+    "numpy",
+    "openpyxl",
+    "pandas[excel]",
+    "pint",
+    "pint-pandas",
+    "pydantic >=2",
+    "scipy",
+    "tables",
+    "tabulate"
 ]
 description = "Command line script and Python library to read HSP2 HDF5 files."
 dynamic = ["readme", "version"]
