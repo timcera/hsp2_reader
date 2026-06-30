@@ -14,8 +14,10 @@ import numpy as np
 import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal
-from toolbox_utils import tsutils
-from toolbox_utils.readers import hdf5
+
+# First party imports
+from hsp2_reader.toolbox_utils.src.toolbox_utils import tsutils
+from hsp2_reader.toolbox_utils.src.toolbox_utils.readers.hdf5 import hdf5_extract
 
 major_np_version = np.__version__.split(".", maxsplit=1)[0]
 major_pd_version = pd.__version__.split(".", maxsplit=1)[0]
@@ -58,7 +60,7 @@ class TestDescribe(TestCase):
         reason="fails if using older versions of the numpy and pandas libraries",
     )
     def test_extract_one_label_labellist_api_2(self):
-        out = hdf5.hdf5_extract("tests/data.h5", "monthly", ["", 1, "", "AGWS"])
+        out = hdf5_extract("tests/data.h5", "monthly", ["", 1, "", "AGWS"])
         assert_frame_equal(
             out, self.extract, check_dtype=False, check_exact=False, rtol=1e-4
         )

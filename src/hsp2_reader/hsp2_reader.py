@@ -10,7 +10,9 @@ import pandas as pd
 
 # First party imports
 from hsp2_reader.toolbox_utils.src.toolbox_utils import tsutils
-from hsp2_reader.toolbox_utils.src.toolbox_utils.readers.hdf5 import hdf5 as _hdf5
+from hsp2_reader.toolbox_utils.src.toolbox_utils.readers.hdf5 import (
+    hdf5_extract as _hdf5,
+)
 
 _warnings.filterwarnings("ignore")
 
